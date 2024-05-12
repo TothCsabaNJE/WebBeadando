@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
     <h1>Thing</h1>
-  <iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=K4TOrB7at0Y">
+  <iframe width="100%" height="315"
+src="https://www.youtube.com/watch?v=K4TOrB7at0Y" class="col-xl-5">
 </iframe>
 
-<iframe width="420" height="315"
-href=""> // Ide még kell egy videó (lokális)
-</iframe>
+<video width="100%" height="315" controls class="col-xl-5">
+  <source src="video.mp4" type="video/mp4">
+</video>
 
-
-// Még igényel változtatást - Térkép
-<div id="googleMap" style="width:100%;height:400px;"></div>
+<div id="googleMap" style="width:100%;height:400px;">  </div>
 
 <script>
 function myMap() {
 var mapProp= {
-  center:new google.maps.LatLng(51.508742,-0.120850),
+  center:new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
   zoom:5,
 };
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
 }
 </script>
 
