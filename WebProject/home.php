@@ -9,16 +9,9 @@ src="https://www.youtube.com/watch?v=K4TOrB7at0Y" class="col-xl-5">
   <source src="video.mp4" type="video/mp4">
 </video>
 
-<div id="googleMap" style="width:100%;height:400px;">  </div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87259.96546150898!2d19.596486083046734!3d46.885528865527974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4743da6108f61c3f%3A0x400c4290c1e1180!2sKecskem%C3%A9t!5e0!3m2!1shu!2shu!4v1715532170697!5m2!1shu!2shu" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="col-xl-12"></iframe>
 
 <script>
-function myMap() {
-var mapProp= {
-  center:new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
-  zoom:5,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -27,10 +20,13 @@ function getLocation() {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
+
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
 </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in nisi ac nisl vestibulum finibus. Integer fringilla aliquet turpis, maximus pretium arcu convallis sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed condimentum dolor neque, id pulvinar leo ultricies nec. Duis sapien leo, sollicitudin ac hendrerit pharetra, pharetra et tortor. Nullam massa leo, auctor et convallis nec, lobortis vel justo. Quisque luctus massa risus, non euismod mauris fringilla nec. Duis placerat ornare sagittis. Suspendisse quis elit non elit posuere consequat. Suspendisse vel odio sit amet purus pharetra efficitur. Cras varius nec arcu eleifend aliquet. In sodales dolor quis porta tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas sit amet enim sed massa iaculis tempus. Integer dui lorem, pellentesque nec nisi nec, aliquam bibendum nisi.</p>
-    
-</html>
