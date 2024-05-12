@@ -7,7 +7,7 @@
         <h1>Send message:</h1>
         <form action="mainpage.php?page=sendMessage" method="post">
             <label><h2>Send To:</h2></label>
-            <input type="text" name="recipient" id="recipient" required><input type="button" value="Send to Developer" onclick="defaultAdd()">
+            <input type="text" name="recipient" id="recipient" required><input type="button" value="Send to Developer" onclick="defaultAdd()"><br>
             <label><h2>Message:</h2></label>
             <input type="text" name="message"><br>
             <input type="submit" name="submit">
