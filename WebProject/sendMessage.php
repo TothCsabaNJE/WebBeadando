@@ -9,7 +9,7 @@
         $username = 'root';
         $password = '';
 
-        echo "<h2>Message sent to ".$_POST["recipient"].":</h2><br>";
+        echo "<h2>>Üzenet elküldve az alábbinak: ".$_POST["recipient"].":</h2><br>";
         echo "<h3>".$_POST["message"]."</h3>";
         try{
             $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
