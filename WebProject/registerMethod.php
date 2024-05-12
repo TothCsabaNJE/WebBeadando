@@ -15,7 +15,7 @@ try {
         $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
         $stmt->execute(['username' => $newUsername, 'password' => $newPassword]);
 
-        include("index.html");
+        include("index.php");
     }
 } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
