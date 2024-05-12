@@ -26,11 +26,11 @@ try {
         }
         include("mainpage.php");
     } else {
-        echo "Hibas";
+        echo "Hibás";
     }
 
 } catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+    echo " Sikertelen csatlakozás: " . $e->getMessage();
 }
 
 ?>
