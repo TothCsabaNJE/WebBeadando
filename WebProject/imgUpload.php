@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
     } else {
         // Feltöltött fájl áthelyezése
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetDir)) {
-            echo "Az  alábbi: " . basename($_FILES["fileToUpload"]["name"]) . " fájl ikeresen feltöltve.";
+            echo "Az  alábbi: " . basename($_FILES["fileToUpload"]["name"]) . " fájl sikeresen feltöltve.";
         } else {
             echo "Sikertelen feltöltés.";
         }
