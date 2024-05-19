@@ -7,6 +7,7 @@
         echo "<h2>>Üzenet elküldve az alábbinak: ".$_POST["recipient"].":</h2><br>";
         echo "<h3>".$_POST["message"]."</h3>";
         try{
+            session_start();
             $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
