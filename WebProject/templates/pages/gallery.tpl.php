@@ -3,7 +3,6 @@
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload Image" name="submit">
     </form>
-
     <h2>Gallery</h2>
     <div class="gallery">
         <?php
@@ -13,7 +12,7 @@
             $ext = strtolower(pathinfo($image, PATHINFO_EXTENSION));
             if (in_array($ext, $supported_file)) {
                 echo "<div class='gallery-item'>";
-                echo "<img src='" . $image . "' alt='" . basename($image) . "'>";
+                echo "<img src='../../images/" . basename($image) . "' alt='" . basename($image) . "'>";
                 echo "</div>";
             }
         }
