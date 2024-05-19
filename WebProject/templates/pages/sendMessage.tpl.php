@@ -11,7 +11,7 @@
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
             $stmt = $conn->prepare("INSERT INTO `messages`(`sender`, `recipient`, `message`) VALUES (:username, :recipient, :message)");
-            $stmt->execute(['username' => $username, 'recipient' => $_POST["recipient"], 'message' => $_POST["message"]]);
+            $stmt->execute(['username' => $_SESSION['user'], 'recipient' => $_POST["recipient"], 'message' => $_POST["message"]]);
         }catch(Exception $e){
             echo $e->getMessage();
         }
