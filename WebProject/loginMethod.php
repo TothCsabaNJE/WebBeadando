@@ -16,6 +16,7 @@ try {
 /* teszt rész */
 
     if ($stmt->rowCount() > 0) {
+        session_start();
         if(!empty($_POST['remember_me'])){
             $rememberme = $_POST['remember_me'];
             setcookie('username',$username, time()*30);
