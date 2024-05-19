@@ -24,6 +24,7 @@ try {
             setcookie('username',$username, 3600*24*7);
             setcookie('password',$password, 3600*24*7);
         }
+        $_SESSION['user'] =$_POST['username'];
         include("mainpage.php");
     } else {
         echo "Hibás";
